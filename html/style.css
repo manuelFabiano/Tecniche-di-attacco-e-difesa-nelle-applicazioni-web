@@ -1,0 +1,57 @@
+.font-custom {
+    font-family: 'Cabin', sans-serif;
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1 1.5;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+#blob {
+    background-color: #e9e6e4;
+    height: 30vmax;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, blue, aquamarine);
+    animation: rotate 10s infinite;
+    opacity: 0.5;
+}
+
+#blur {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    backdrop-filter: blur(12vmax);
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #e9e6e4;
+}
+
+#bg {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    background: radial-gradient(circle, #000000 10%, transparent 11%),radial-gradient(circle at bottom left, #000000 5%, transparent 6%),radial-gradient(circle at bottom right, #000000 5%, transparent 6%),radial-gradient(circle at top left, #000000 5%, transparent 6%),radial-gradient(circle at top right, #000000 5%, transparent 6%);
+    background-size: 3em 3em;
+    background-color: #ffffff;
+    opacity: 0.02
+}
